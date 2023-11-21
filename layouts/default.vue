@@ -2,7 +2,8 @@
 
 <template>
   <div class="">
-    <Header/>
-    <slot/>
+    <Header />
+    <slot />
+    <Footer />
   </div>
 </template>

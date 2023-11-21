@@ -13,6 +13,7 @@ useHead({
   <div>
     <NuxtLayout :name="layout">
       <NuxtLoadingIndicator color="#3E46FF"/>
+      <div class="bg-qwerty text"></div>
       <NuxtPage/>
     </NuxtLayout>
   </div>

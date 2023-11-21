@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["store", 'composables', 'composables/*/index.{ts,js,mjs,mts}', 'composables/**'],
   },
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   css: ["assets/css/style.css", "assets/css/fonts.css"],
   modules: ['@pinia/nuxt', '@nuxtjs/i18n', "@pinia/nuxt"],
   plugins: ['~/plugins/maska.ts'],
@@ -57,11 +57,5 @@ export default defineNuxtConfig({
   },
   pinia: {
     autoImports: ["defineStore", ["defineStore", "definePiniaStore"]],
-  },
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
   },
 })

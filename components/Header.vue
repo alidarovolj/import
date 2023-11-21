@@ -4,7 +4,7 @@ import {IconMenu2, IconSearch, IconShoppingBag, IconUser, IconWorld} from "@tabl
 const links = ref([
   {
     title: "artworks",
-    link: "/"
+    link: "/about"
   },
   {
     title: "artists",
