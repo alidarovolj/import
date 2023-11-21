@@ -1,0 +1,70 @@
+{
+  "artists_list": {
+    "data": [
+      {
+        "id": 1,
+        "img": "link_to_avatar",
+        "name": "Jeeyon 'G'Roslie",
+        "location": "East Sussex, United Kingdom",
+        "followers": 20350,
+        "works_num": 49,
+        "reviews": 20,
+        "works": [
+          {
+            "id": 1,
+            "img": "link_to_photo"
+          },
+          {
+            "id": 2,
+            "img": "link_to_photo"
+          },
+          {
+            "id": 3,
+            "img": "link_to_photo"
+          }
+        ]
+      }
+    ]
+  },
+  "categories_list": {
+    "data": [
+      {
+        "id": 1,
+        "name": "Paintings",
+        "img": "link_to_photo"
+      },
+      {
+        "id": 2,
+        "name": "Mosaics",
+        "img": "link_to_photo"
+      },
+      {
+        "id": 3,
+        "name": "Sculptures",
+        "img": "link_to_photo"
+      }
+    ]
+  },
+  "news_list": {
+    "data": [
+      {
+        "id": 1,
+        "name": "name_of_news",
+        "description": "Tips on selecting art that complements your interior design",
+        "img": "link_to_photo"
+      },
+      {
+        "id": 2,
+        "name": "name_of_news",
+        "description": "Tips on selecting art that complements your interior design",
+        "img": "link_to_photo"
+      },
+      {
+        "id": 3,
+        "name": "name_of_news",
+        "description": "Tips on selecting art that complements your interior design",
+        "img": "link_to_photo"
+      }
+    ]
+  }
+}

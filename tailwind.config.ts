@@ -1,5 +1,5 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+import type {Config} from "tailwindcss";
+export default <Config>{
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -9,7 +9,15 @@ export default {
     "./error.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      borderColor: {
+        bColor: "#DDDDDD"
+      }
+    },
+  },
+  daisyui: {
+    themes: false,
+    logs: false,
   },
   plugins: [require("daisyui")],
 }

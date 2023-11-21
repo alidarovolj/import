@@ -4,4 +4,10 @@
 
 html {
     font-family: "Aktiv Grotesk Corp", sans-serif;
+    background: #fff;
+    color: #1A1A1A;
+}
+
+body {
+    background: #fff;
 }
