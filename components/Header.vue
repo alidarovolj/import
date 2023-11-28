@@ -15,6 +15,7 @@ const links = ref([
 ])
 
 const menu = ref(false)
+const menuMain = ref(false)
 const catalog = useCatalogListStore()
 
 onMounted(async () => {
@@ -24,14 +25,25 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div
-      class="relative z-30 bg-white header">
+  <div v-if="menuMain" class="fixed top-0 left-0 z-50 bg-white w-full h-full">
+    <div class="pt-56">
+      <Button
+          v-for="(item, index) of links"
+          :key="index"
+          @click="menuMain = false"
+          class="mx-5 mb-3 line relative text-xl block"
+          :link="item.link"
+          :title="item.title"
+      />
+    </div>
+  </div>
+  <div class="relative z-50 bg-white header">
     <div class="relative z-40 bg-white">
       <div class="border-b border-bColor">
         <div class="container mx-auto px-4 lg:px-0 py-4">
           <div class="flex items-center justify-between text-sm font-bold">
             <div class="flex items-center">
-              <IconMenu2 class="block lg:hidden mr-3" size="20"/>
+              <IconMenu2 @click="menuMain = !menuMain" class="block lg:hidden mr-3" size="20"/>
               <NuxtLink to="/">
                 <img src="@/assets/img/logo.png" alt="">
               </NuxtLink>
@@ -49,7 +61,7 @@ onMounted(async () => {
               </div>
             </div>
             <div class="flex items-center bg-mainColor text-white w-max px-3 py-2 rounded">
-              <IconPhone class="mr-2" size="24"/>
+              <IconPhone class="lg:mr-2" size="24"/>
               <a class="hidden text-base lg:block w-max font-semibold text-white" href="tel:+77472367503" title="sell with us">
                 Заказать звонок
               </a>
@@ -78,8 +90,8 @@ onMounted(async () => {
         :class="{ 'translate-y-0' : menu }"
         style="box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.49);">
       <div v-if="catalog.accData" class="container mx-auto px-4 lg:px-0 h-full">
-        <div class="flex flex-wrap justify-between h-full">
-          <div class="w-fourth" v-for="(item, index) of catalog.accData" :key="index">
+        <div class="block lg:flex flex-wrap justify-between h-full">
+          <div class="w-full lg:w-fourth" v-for="(item, index) of catalog.accData" :key="index">
             <NuxtLink
                 @click="menu = false"
                 :to="'/categories/' + item.id"
@@ -103,4 +115,5 @@ onMounted(async () => {
       </div>
     </div>
   </div>
+  <div v-if="menu" class="blackBG absolute z-30 left-0 top-0 w-full h-[10000px] bg-black opacity-30"></div>
 </template>

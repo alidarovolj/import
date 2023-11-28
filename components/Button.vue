@@ -4,7 +4,7 @@ const props = defineProps(['link', 'title'])
 
 <template>
   <NuxtLink
-      class="line relative"
+      class="line relative w-max"
       :to="link"
   >
     {{ title }}

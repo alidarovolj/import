@@ -1,5 +1,5 @@
 <script setup>
-import {useProductsListStore} from "~/store/Products.js";
+import {useProductsListStore} from "~/store/products.js";
 import {useCatalogListStore} from "~/store/catalog.js";
 
 const catalog = useCatalogListStore()

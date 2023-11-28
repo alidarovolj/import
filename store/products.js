@@ -7,7 +7,8 @@ export const useProductsListStore = defineStore('products', () => {
     const analogs = ref(null)
 
     return {
-        accData, analogs, product, async getProducts(par) {
+        accData, analogs, product,
+        async getProducts(par) {
             const {data} = await useFetch('/catalog/category/' + par, {
                 method: 'GET', headers: {
                     accept: "application/json"

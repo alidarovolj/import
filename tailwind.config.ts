@@ -12,7 +12,8 @@ export default <Config>{
                 negColor: "#7B7B7B"
             }, width: {
                 third: "32%",
-                fourth: "24.5%"
+                fourth: "24.5%",
+                half: "48%"
             }
         },
     },
