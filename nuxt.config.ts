@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       API_LINK: process.env.API_LINK,
+      IMAGE_LINK: process.env.IMAGE_LINK,
     },
   },
   postcss: {
