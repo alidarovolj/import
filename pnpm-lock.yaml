@@ -29,6 +29,12 @@ dependencies:
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(vue@3.3.8)
+  vue3-carousel:
+    specifier: ^0.3.1
+    version: 0.3.1(vue@3.3.8)
+  vue3-carousel-nuxt:
+    specifier: ^1.1.0
+    version: 1.1.0(vue@3.3.8)
 
 devDependencies:
   '@nuxt/devtools':
@@ -6356,6 +6362,25 @@ packages:
       '@vue/devtools-api': 6.5.1
       vue: 3.3.8
     dev: true
+
+  /vue3-carousel-nuxt@1.1.0(vue@3.3.8):
+    resolution: {integrity: sha512-l5nyzKi4PhFVRuopnNUvnPD4fOZ6vpLPH/RCwKcC+35sDmWPvTjpkSs6ondkiAHAgOX61LHoOB9WBJb8CRIdkQ==}
+    dependencies:
+      '@nuxt/kit': 3.8.1
+      vue3-carousel: 0.3.1(vue@3.3.8)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - vue
+    dev: false
+
+  /vue3-carousel@0.3.1(vue@3.3.8):
+    resolution: {integrity: sha512-86vUkNPBzL2PVuR9w6hUsI90ccFjLp+K8cSFpRTISf+SjUQY3fMHc5CFF5MUL62v1xYYm27zEBmQupO9VQx9Kw==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.3.8
+    dev: false
 
   /vue@3.3.8:
     resolution: {integrity: sha512-5VSX/3DabBikOXMsxzlW8JyfeLKlG9mzqnWgLQLty88vdZL7ZJgrdgBOmrArwxiLtmS+lNNpPcBYqrhE6TQW5w==}

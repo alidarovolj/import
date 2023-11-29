@@ -31,7 +31,7 @@ export default {
       >
         <IconArrowLeft
             :size="24"
-            class="block lg:hidden text-lg text-secondaryColor mr-3"
+            class="block lg:hidden text-lg text-mainColor mr-3"
         />
       </NuxtLink>
       <div

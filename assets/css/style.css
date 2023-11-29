@@ -8,6 +8,10 @@ html {
     color: #1A1A1A;
 }
 
+.header .router-link-exact-active {
+    color: #5330C8;
+}
+
 body {
     background: #FAFAFA;
 }
@@ -30,8 +34,4 @@ body {
     to {
         transform: rotate(360deg);
     }
-}
-
-.header a.nuxt-link-active {
-    color: #5330C8 !important
 }

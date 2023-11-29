@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   css: ["assets/css/style.css", "assets/css/fonts.css"],
-  modules: ['@pinia/nuxt', '@nuxtjs/i18n', "@pinia/nuxt"],
+  modules: ['@pinia/nuxt', '@nuxtjs/i18n', "@pinia/nuxt", 'vue3-carousel-nuxt'],
   plugins: ['~/plugins/maska.ts'],
   runtimeConfig: {
     public: {
