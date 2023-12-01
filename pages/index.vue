@@ -148,7 +148,7 @@ useHead({
   <div class="products">
     <div class="container mx-auto px-4 lg:px-0">
       <div v-if="products.accData" class="flex justify-between flex-wrap">
-        <div class="w-full lg:w-fourth text-mainColor relative flex items-center justify-center mb-20 lg:mb-0">
+        <div class="w-full lg:w-fourth text-mainColor relative flex flex-wrap items-center justify-between mb-20 lg:mb-0">
           <div class="w-[140px] h-[140px]  absolute right-0 bottom-0 bg-mainColor opacity-20 rounded-full z-20"></div>
           <div
               class="w-[250px] h-[250px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-secondaryColor opacity-20 rounded-full z-10"></div>
@@ -170,7 +170,7 @@ useHead({
         <div
             v-for="(product, index) of products.accData.products.data"
             :key="index"
-            class="w-full mb-5 bg-white rounded px-6 py-3 mt-24 cursor-pointer"
+            class="w-full lg:w-fourth mb-5 bg-white rounded px-6 py-3 mt-24 cursor-pointer"
             style="box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.05), 7px 7px 10px 0px rgba(0, 0, 0, 0.15);">
           <NuxtLink
               :to="'/products/' + product.id"
