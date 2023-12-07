@@ -8,6 +8,38 @@ html {
     color: #1A1A1A;
 }
 
+.multi-range-slider-bar-only .thumb .caption * {
+    background: #5330c8 !important;
+}
+
+.multi-range-slider-bar-only .thumb::before {
+    box-shadow: none !important;
+    border: 5px solid #f3c837 !important;
+}
+
+.multi-range-slider-bar-only .bar-left,
+.multi-range-slider-bar-only .bar-right {
+    box-shadow: none !important;
+    border: none !important;
+    background: #7B7B7B !important;
+}
+
+.multi-range-slider-bar-only .bar-inner {
+    background: #5330C8 !important;
+    box-shadow: none !important;
+    border: 1px solid #d2d4d7 !important;
+}
+
+.multi-range-slider-bar-only {
+    padding: 0 !important;
+    padding-right: 10px !important;
+}
+
+.MultiRangeSliderContainer {
+  margin: auto;
+  width: 800px;
+}
+
 .header .router-link-exact-active {
     color: #5330C8;
 }

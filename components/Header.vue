@@ -10,7 +10,7 @@ const links = ref([
   },
   {
     title: "Продукты",
-    link: "/"
+    link: "/products"
   },
 ])
 
@@ -91,8 +91,8 @@ onMounted(async () => {
       </div>
     </div>
     <div
-        :class="{ 'translate-y-0' : menu }"
-        class="absolute left-0 top-full bg-white py-5 z-20 w-full h-96 -translate-y-full transition-all"
+        :class="{ 'translate-y-0 !h-96 overflow-y-scroll' : menu }"
+        class="absolute left-0 top-full bg-white py-5 z-20 w-full h-0 lg:h-96 -translate-y-full transition-all overflow-y-hidden"
         style="box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.49);">
       <div v-if="catalog.accData" class="container mx-auto px-4 lg:px-0 h-full">
         <div class="block lg:flex flex-wrap justify-between h-full">

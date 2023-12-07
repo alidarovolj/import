@@ -37,7 +37,7 @@ export const useOrderStore = defineStore('order', () => {
                 return
             }
 
-            const {data, error} = await useFetch('/checkout/create', {
+            const {data, error} = await useFetch('checkout/create', {
                 method: 'POST', headers: {
                     accept: "application/json"
                 }, body: orderData, baseURL: runtimeConfig.public.API_LINK, lazy: true,

@@ -75,10 +75,37 @@ useHead({
     <div class="container mx-auto px-4 lg:px-0">
       <div class="block lg:flex items-center justify-between mb-14">
         <p class="text-5xl text-mainColor font-semibold mb-2 lg:mb-0">Категории</p>
-        <div class="text-secondaryColor flex items-center text-xl">
-          <p>посмотреть все</p>
+        <div class="text-secondaryColor flex items-center text-xl cursor-pointer">
+          <p class="" onclick="categories.showModal()">посмотреть все</p>
           <IconChevronRight size=""/>
         </div>
+        <dialog id="categories" class="modal">
+          <div class="modal-box w-11/12 max-w-5xl">
+            <form method="dialog">
+              <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            </form>
+            <h3 class="font-bold text-mainColor text-2xl mb-6">Категории</h3>
+            <div class="flex flex-wrap justify-between">
+              <div
+                  v-for="(item, index) in catalog.accData"
+                  :key="index"
+                  class="relative cursor-pointer mb-5 block w-full lg:w-third"
+              >
+                <NuxtLink
+                    :to="'/categories/' + item.id"
+                    class="w-full relative block">
+                  <img :src="runtimeConfig.public.IMAGE_LINK + item.image" alt=""
+                       class="relative z-20 mx-auto mb-4">
+                  <p class="text-center text-xl font-semibold">{{ item.category_name }}</p>
+                  <p class="text-center text-xs">??? продуктов</p>
+                </NuxtLink>
+              </div>
+            </div>
+          </div>
+          <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+          </form>
+        </dialog>
       </div>
       <div v-if="catalog.accData">
         <client-only>
@@ -168,7 +195,7 @@ useHead({
           </div>
         </div>
         <div
-            v-for="(product, index) of products.accData.products.data"
+            v-for="(product, index) of products.accData.products.data.slice(0, 7)"
             :key="index"
             class="w-full lg:w-fourth mb-5 bg-white rounded px-6 py-3 mt-24 cursor-pointer"
             style="box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.05), 7px 7px 10px 0px rgba(0, 0, 0, 0.15);">

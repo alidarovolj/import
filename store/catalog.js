@@ -9,7 +9,7 @@ export const useCatalogListStore = defineStore('catalog', () => {
         accData,
         searchData,
         async getCatalog() {
-            const {data} = await useFetch('/catalog', {
+            const {data} = await useFetch('catalog', {
                 method: 'GET',
                 headers: {
                     accept: "application/json"
@@ -20,7 +20,7 @@ export const useCatalogListStore = defineStore('catalog', () => {
             accData.value = data.value
         },
         async search(query) {
-            const {data} = await useFetch('/catalog/search?query=' + query, {
+            const {data} = await useFetch('catalog/search?query=' + query, {
                 method: 'GET',
                 headers: {
                     accept: "application/json"
