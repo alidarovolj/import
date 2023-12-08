@@ -20,7 +20,7 @@ const breakpoints = {
     snapAlign: 'center',
   },
   1024: {
-    itemsToShow: 4,
+    itemsToShow: 3,
     snapAlign: 'start',
   },
 };
@@ -327,16 +327,16 @@ useHead({
       <p class="text-4xl font-bold mb-7 text-mainColor">Аналоги</p>
       <div
           v-if="products.analogs"
-          class="block lg:flex justify-between">
+          class="block lg:flex justify-between w-full">
         <client-only>
           <Carousel
               :breakpoints="breakpoints"
               :itemsToShow="settings.itemsToShow"
-              class="mt-9 py-0">
+              class="mt-9 py-0 w-full">
             <Slide
                 v-for="(product, index) in products.analogs"
                 :key="index"
-                class="relative cursor-pointer mb-3 lg:mb-0 block"
+                class="relative cursor-pointer mb-3 lg:mb-0 block !mr-3"
             >
               <div
                   class="w-full mb-5 bg-white rounded px-6 py-3 mt-20 cursor-pointer block"
