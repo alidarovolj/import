@@ -1,9 +1,27 @@
+import axios from 'axios'
+
+const getDynamicRoutes = async () => {
+  const response = await axios.get('https://api.codecrafters.kz/api/catalog/')
+  return response?.data?.map((post) => `/category/${post.id}`);
+};
+
+const getDynamicRoutesProducts = async () => {
+  const response = await axios.get('https://api.codecrafters.kz/api/catalog/')
+  return response?.data?.map((post) => `/category/${post.id}`);
+};
+
 export default defineNuxtConfig({
   ssr: false,
   components: [{
     path: '~/components',
     pathPrefix: false,
   }],
+  hooks: {
+    async 'nitro:config'(nitroConfig) {
+      const categories = await getDynamicRoutes();
+      nitroConfig.prerender.routes.push(...categories);
+    },
+  },
   imports: {
     dirs: ["store", 'composables', 'composables/*/index.{ts,js,mjs,mts}', 'composables/**'],
   },
